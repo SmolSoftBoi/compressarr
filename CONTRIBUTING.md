@@ -18,13 +18,13 @@ Install yarn dependencies:
 yarn install
 ```
 
-Build Homebridge:
+Build Compressarr:
 
 ```bash
 yarn run build
 ```
 
-Start Homebridge:
+Start Compressarr:
 
 ```bash
 yarn run dev
