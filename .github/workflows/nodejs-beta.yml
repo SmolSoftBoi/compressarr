@@ -29,7 +29,7 @@ jobs:
           CI: true
 
   publish-npm:
-    if: github.repository == 'homebridge/homebridge'
+    if: github.repository == 'EpicKris/compressarr'
 
     needs: build # only run if build succeeds
 

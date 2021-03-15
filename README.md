@@ -4,8 +4,6 @@
 
 </span>
 
-<img src="https://media.giphy.com/media/10l79ICohTu4iQ/giphy.gif" align="right" alt="Unlocking Door">
-
 **Compressarr** is a lightweight NodeJS server you can run that provides transcode automation. It supports Plugins, which are community-contributed modules that provide basic actions to transcode media.
 
 You can explore all available plugins at the yarn website by [searching for the keyword `compressarr-plugin`](https://yarnpkg.com/?q=compressarr-plugin).
@@ -18,7 +16,7 @@ Ensure you have **Node.js v10.17.0** or later installed and run:
 sudo yarn global add compressarr
 ```
 
-Then start Homebridge in your terminal window by running:
+Then start Compressarr in your terminal window by running:
 
 ```shell
 compressarr
