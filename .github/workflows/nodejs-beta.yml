@@ -1,0 +1,49 @@
+name: Node-CI Beta
+
+on:
+  push:
+    branches: beta
+
+jobs:
+  build:
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
+        os: [ubuntu-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: yarn install, build and test
+        run: |
+          yarn ci
+          yarn run build
+          yarn test
+        env:
+          CI: true
+
+  publish-npm:
+    if: github.repository == 'homebridge/homebridge'
+
+    needs: build # only run if build succeeds
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10 # use the minimum required version
+          registry-url: https://registry.npmjs.org/
+      - run: yarn ci
+      - run: yarn .github/workflows/prerelease.js
+      - run: yarn --no-git-tag-version version pre --preid=beta
+      - run: yarn publish --tag=beta
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}

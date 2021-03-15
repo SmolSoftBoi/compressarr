@@ -1,0 +1,14 @@
+{
+    "libraries": [
+        {
+            "library": "/Volumes/Media Drive",
+            "name": "Media"
+        }
+    ],
+    "jobActions": [
+        {
+            "jobAction": "",
+            "name": ""
+        }
+    ]
+}

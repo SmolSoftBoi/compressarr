@@ -1,0 +1,66 @@
+{
+  "name": "compressarr",
+  "version": "0.0.1",
+  "description": "Transcode automation.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "bin": {
+    "homebridge": "bin/homebridge"
+  },
+  "repository": {
+    "type": "giy",
+    "url": "git://github.com/EpicKris/compressarr.git"
+  },
+  "bugs": {
+    "url": "http://github.com/EpicKris/compressarr/issues"
+  },
+  "author": "Kristian Matthews <kristian.matthews@me.com>",
+  "scripts": {
+    "dev": "DEBUG=* ./bin/compressarr -D -P || true",
+    "lint": "eslint 'src/**/*.{js,ts,json}'",
+    "build": "yarn run clean && tsc",
+    "clean": "rimraf lib/",
+    "watch": "nodemon",
+    "prepublishOnly": "yarn run build",
+    "postpublish": "yarn run clean"
+  },
+  "engines": {
+    "node": ">=10.17.0"
+  },
+  "files": [
+    "README.md",
+    "config-sample.json",
+    "lib",
+    "bin"
+  ],
+  "preferGlobal": true,
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "chokidar": "^3.5.1",
+    "commander": "7.1.0",
+    "exiftool-vendored": "^14.0.0",
+    "ffprobe": "^1.1.2",
+    "ffprobe-static": "^3.0.0",
+    "fs-extra": "^9.1.0",
+    "handbrake": "^0.0.1",
+    "semver": "^7.3.4"
+  },
+  "devDependencies": {
+    "@epickris/node-logger": "^0.0.3",
+    "@types/debug": "^4.1.5",
+    "@types/ffprobe": "^1.1.1",
+    "@types/ffprobe-static": "^2.0.0",
+    "@types/fs-extra": "^9.0.7",
+    "@types/node": "^14.14.31",
+    "@types/rimraf": "^3.0.0",
+    "@types/semver": "^7.3.4",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "eslint": "^7.21.0",
+    "eslint-plugin-jest": "^24.1.5",
+    "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2"
+  }
+}
