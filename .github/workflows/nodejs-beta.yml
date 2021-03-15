@@ -41,7 +41,7 @@ jobs:
         with:
           node-version: 10 # use the minimum required version
           registry-url: https://registry.npmjs.org/
-      - run: yarn ci
+      - run: yarn install
       - run: yarn .github/workflows/prerelease.js
       - run: yarn --no-git-tag-version version pre --preid=beta
       - run: yarn publish --tag=beta
