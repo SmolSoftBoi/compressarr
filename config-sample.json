@@ -7,8 +7,8 @@
     ],
     "jobActions": [
         {
-            "jobAction": "",
-            "name": ""
+            "jobAction": "Compressor",
+            "name": "Compressor"
         }
     ]
 }
