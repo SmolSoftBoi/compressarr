@@ -32,3 +32,7 @@ export { LogLevel } from '@epickris/node-logger';
  * Export Logger types.
  */
 export type { Logger, Logging } from '@epickris/node-logger';
+
+export type { Job } from './job';
+
+export { KillError } from './errors';
