@@ -1,4 +1,4 @@
-import { join } from 'path';
+import { extname, join } from 'path';
 
 import { Logging } from '@epickris/node-logger';
 import { existsSync, remove } from 'fs-extra';
@@ -56,11 +56,25 @@ export class Job {
     }
 
     /**
+     * Get Source Extension
+     * @returns Source Extension
+     */
+    getSrcExt(): string {
+        return extname(this.getSrcPath());
+    }
+
+    /**
      * Get Destination Path
      * @returns Destination Path
      */
-    getDestPath(): string {
+    getDestPath(ext?: string): string {
         if (!this.tempDestPath) this.tempDestPath = this.nextAvailableDest(this.tempPath);
+
+        if (ext) {
+            ext.replace(/^\.+/, '');
+
+            return `${this.tempDestPath}.${ext}`;
+        }
 
         return this.tempDestPath;
     }

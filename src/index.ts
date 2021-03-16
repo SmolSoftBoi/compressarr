@@ -6,7 +6,7 @@ export { APIEvent, PluginType } from './api';
 /**
  * Export types for basically everything but the actual API implementation.
  */
-export type { PluginIdentifier, PluginName, ScopedPluginName, JobActionName, JobActionIdentifier, PluginInitializer, JobActionPluginConstructor, JobActionPlugin, API } from './api';
+export type { API, JobActionIdentifier, JobActionName, JobActionPlugin, JobActionPluginConstructor, JobIdentifier, PluginIdentifier, PluginInitializer, PluginName, ScopedPluginName } from './api';
 
 /**
  * Export server types.
