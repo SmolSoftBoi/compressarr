@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. This project uses [Semantic Versioning](https://semver.org/).
 
+## v0.0.5 (2021-03-16)
+
+### Other Changes
+
+* Add job exports.
+* Add error exports.
+
 ## v0.0.4 (2021-03-16)
 
 ### Other Changes
