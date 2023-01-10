@@ -97,7 +97,7 @@ export class Job {
      * @param i I
      * @returns Next Available Destination
      */
-    private nextAvailableDest(path: string, i: number = 1): string {
+    private nextAvailableDest(path: string, i = 1): string {
         const dest = join(path, `${this.name}-${i}`);
 
         if (existsSync(dest)) {

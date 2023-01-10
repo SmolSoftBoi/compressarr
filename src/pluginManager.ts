@@ -2,7 +2,7 @@ import { execSync } from 'child_process';
 import { existsSync, readdirSync, readFileSync, statSync } from 'fs';
 import { delimiter, join, resolve } from 'path';
 
-import { Logger } from '@epickris/node-logger';
+import { getErrorMessage, getErrorStack, Logger } from '@epickris/node-logger';
 
 import { CompressarrAPI, InternalAPIEvent, JobActionIdentifier, JobActionName, JobActionPluginConstructor, PluginIdentifier, PluginName } from './api';
 import { Plugin } from './plugin';
@@ -181,7 +181,7 @@ export class PluginManager {
             } catch (error) {
                 log.error('====================');
                 log.error(`ERROR LOADING PLUGIN ${identifier}:`);
-                log.error(error.stack);
+                log.error(getErrorStack(error));
                 log.error('====================');
         
                 this.plugins.delete(identifier);
@@ -219,7 +219,7 @@ export class PluginManager {
         } catch (error) {
           log.error('====================');
           log.error(`ERROR INITIALIZING PLUGIN ${identifier}:`);
-          log.error(error.stack);
+          log.error(getErrorStack(error));
           log.error('====================');
     
           this.plugins.delete(identifier);
@@ -338,7 +338,7 @@ export class PluginManager {
                 try {
                     this.loadPlugin(searchPath);
                 } catch (error) {
-                    log.warn(error.message);
+                    log.warn(getErrorMessage(error));
 
                     return;
                 }
@@ -347,7 +347,7 @@ export class PluginManager {
                     try {
                         return statSync(resolve(searchPath, relativePath)).isDirectory();
                     } catch (error) {
-                        log.debug(`Ignoring path ${resolve(searchPath, relativePath)} - ${error.message}`);
+                        log.debug(`Ignoring path ${resolve(searchPath, relativePath)} - ${getErrorMessage(error)}`);
 
                         return false;
                     }
@@ -363,7 +363,7 @@ export class PluginManager {
                         try {
                             return statSync(resolve(absolutePath, name)).isDirectory();
                         } catch (error) {
-                            log.debug(`Ignoring path ${resolve(absolutePath, name)} - ${error.message}`);
+                            log.debug(`Ignoring path ${resolve(absolutePath, name)} - ${getErrorMessage(error)}`);
 
                             return false;
                         }
@@ -378,7 +378,7 @@ export class PluginManager {
 
                         this.loadPlugin(absolutePath);
                     } catch (error) {
-                        log.warn(error.message);
+                        log.warn(getErrorMessage(error));
 
                         return;
                     }

@@ -1,4 +1,4 @@
-import { Logger } from '@epickris/node-logger';
+import { Logger, getError } from '@epickris/node-logger';
 import { existsSync } from 'fs-extra';
 
 import { CompressarrAPI, InternalAPIEvent, LibraryName } from './api';
@@ -81,7 +81,7 @@ export class LibraryManager {
      * @returns Library
      */
     public getLibrary(libraryName: LibraryName): Library {
-        let library = this.libraries.get(libraryName);
+        const library = this.libraries.get(libraryName);
 
         if (!library) {
             throw new Error(`No library was found for the library "${libraryName}" in your config.json. Please make sure the corresponding library is configured correctly.`);
@@ -103,7 +103,7 @@ export class LibraryManager {
             try {
                 this.loadLibrary(config);
             } catch (error) {
-                log.warn (error);
+                log.warn(getError(error));
 
                 return;
             }

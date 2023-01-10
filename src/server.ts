@@ -1,4 +1,4 @@
-import { Logger } from '@epickris/node-logger';
+import { Logger, getError, getErrorMessage } from '@epickris/node-logger';
 import { existsSync, moveSync, readFileSync } from 'fs-extra';
 import rimraf from 'rimraf';
 
@@ -122,7 +122,7 @@ export class Server {
                             return;
                         }
 
-                        log.error(error);
+                        log.error(getError(error));
                     }
                 } else {
                     jobActionInstance.kill(path);
@@ -244,7 +244,7 @@ export class Server {
             try {
                 plugin = this.pluginManager.getPluginForJobAction(jobActionIdentifier);
             } catch (error) {
-                log.error(error.message);
+                log.error(getErrorMessage(error));
 
                 return;
             }
@@ -259,7 +259,7 @@ export class Server {
                 constructor = plugin.getJobActionConstructor(jobActionIdentifier);
             } catch (error) {
                 log.error(`Error loading the job action "${jobActionIdentifier}" requested in your config.json at position ${index + 1} - this is likely an issue with the "${plugin.getPluginIdentifier()}" plugin.`);
-                log.error(error);
+                log.error(getError(error));
 
                 return;
             }
@@ -300,7 +300,7 @@ export class Server {
             try {
                 library = this.libraryManager.getLibrary(libraryName);
             } catch (error) {
-                log.error(error.message);
+                log.error(getErrorMessage(error));
 
                 return;
             }
