@@ -291,10 +291,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@epickris/node-logger@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@epickris/node-logger/-/node-logger-0.0.3.tgz#3b8d6c38acc3d5b8ace8177cd8fd71af436a9663"
-  integrity sha512-oUWXAR4mvbA4XS688SlqDqCLi1rHO7jYoecrJRFHvnOAAM5n+hVBVGckuj7yd9sjVQIeM63QoYyoz9TWTCrEnQ==
+"@epickris/node-logger@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@epickris/node-logger/-/node-logger-0.1.1.tgz#0f0e2e36cdc0e5faa7460358622b4fe8b3e7d402"
+  integrity sha512-DzHeNc9nO7na4OLFU9SZFP+cVgTs5T8qu/xd0OiJTBVq3DOuF1gAzE1T/vXFWBnY4J6NQ2flGWlgCPJzRPHYZw==
   dependencies:
     chalk "^4.1.0"
 
