@@ -1,6 +1,6 @@
 import { Logger, getError, getErrorMessage } from '@epickris/node-logger';
 import { existsSync, moveSync, readFileSync } from 'fs-extra';
-import rimraf from 'rimraf';
+import { rimrafSync } from 'rimraf';
 
 import { CompressarrAPI, InternalAPIEvent, JobActionIdentifier, JobActionName, JobActionPlugin, JobActionPluginConstructor, LibraryName } from './api';
 import { CompressarrConfig, JobConfig } from './bridgeService';
@@ -144,7 +144,7 @@ export class Server {
 
                 this.activeJobs.delete(path);
 
-                rimraf(jobConfig.tempPath);
+                rimrafSync(jobConfig.tempPath);
 
                 this.api.publishJob(path);
             }
