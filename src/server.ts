@@ -144,7 +144,7 @@ export class Server {
 
                 this.activeJobs.delete(path);
 
-                rimraf(jobConfig.tempPath, () => {});
+                rimraf(jobConfig.tempPath);
 
                 this.api.publishJob(path);
             }
