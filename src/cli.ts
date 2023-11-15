@@ -1,6 +1,6 @@
 import 'source-map-support/register';
 
-import commander from 'commander';
+import { Command } from 'commander';
 import { satisfies } from 'semver';
 import { Logger } from '@epickris/node-logger';
 
@@ -43,7 +43,9 @@ export = function cli(): void {
     /** Shutting Down? */
     let shuttingDown = false;
 
-    commander
+    const program = new Command();
+
+    program
         .version(getVersion())
         .option('-C, --color', 'Force color in logging.', () => forceColorLogging = true)
         .option('-D, --debug', 'Turn on debug level logging.', () => debugModeEnabled = true)
