@@ -1674,10 +1674,10 @@ exiftool-vendored.pl@12.70.0:
   resolved "https://registry.yarnpkg.com/exiftool-vendored.pl/-/exiftool-vendored.pl-12.70.0.tgz#787dfa7cf6ab5a323aaaccf0bd697aff6f8f4a11"
   integrity sha512-nozVKVE7Leq2lQ+Kd6VbX+S04z0TKYGd42F1odwEl8AtWNlJViZ7rsi+OLHkJ0llWmObotviYAsj/xhF28qPSQ==
 
-exiftool-vendored@^23.4.0:
-  version "23.7.0"
-  resolved "https://registry.yarnpkg.com/exiftool-vendored/-/exiftool-vendored-23.7.0.tgz#146a56f9a4fb641fca429fab7db7b7bc593e0320"
-  integrity sha512-Y30UJl7QPJiwDaT9ynFOXbW0QLrfHFJdQkPBEfCUZINk69gnn9V0kh/1KthTHXCb6dNDJvQaAYkpm4e+TNEWbQ==
+exiftool-vendored@^24.1.0:
+  version "24.1.0"
+  resolved "https://registry.yarnpkg.com/exiftool-vendored/-/exiftool-vendored-24.1.0.tgz#b9dd3bd74d3bb15f8525b074c7748bee236c6325"
+  integrity sha512-PAeSbQB7ITLrUW4MrH8Fjx+PK1qBNo5q/h0ET3FDIz4gcpPkILeO9vWMthClTfe3/v7CgarEFCUcY+fuzSX/Bg==
   dependencies:
     "@photostructure/tz-lookup" "^8.0.0"
     "@types/luxon" "^3.3.7"
@@ -3106,6 +3106,7 @@ string-length@^4.0.1:
     strip-ansi "^6.0.0"
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -3131,6 +3132,7 @@ string_decoder@^1.1.1:
     safe-buffer "~5.2.0"
 
 "strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+  name strip-ansi-cjs
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -3380,6 +3382,7 @@ which@^2.0.1:
     isexe "^2.0.0"
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
