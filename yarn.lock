@@ -640,10 +640,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@photostructure/tz-lookup@^8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@photostructure/tz-lookup/-/tz-lookup-8.0.0.tgz#9742eedc61e6cf75539f5adbb3d0d90dab7294ee"
-  integrity sha512-D5ggPEWSNGEKzKTx6+Gn0NZXHQ4ywgRd2p2h7i/tjEmkv/uJ9SzQd0o7v7FzEAt4bP3dxDoWm43aPfUs9qMOGg==
+"@photostructure/tz-lookup@^10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@photostructure/tz-lookup/-/tz-lookup-10.0.0.tgz#f3d25a59b11f3075bac88a458628aad6df8b9ed5"
+  integrity sha512-8ZAjoj/irCuvUlyEinQ/HB6A8hP3bD1dgTOZvfl1b9nAwqniutFDHOQRcGM6Crea68bOwPj010f0Z4KkmuLHEA==
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
@@ -793,10 +793,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/luxon@^3.3.7":
-  version "3.3.7"
-  resolved "https://registry.yarnpkg.com/@types/luxon/-/luxon-3.3.7.tgz#043d413b6492a012de47503907bdf3ec4f827933"
-  integrity sha512-gKc9P2d4g5uYwmy4s/MO/yOVPmvHyvzka1YH6i5dM03UrFofHSmgc0D0ymbDRStFWHusk6cwwF6nhLm/ckBbbQ==
+"@types/luxon@^3.4.2":
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/@types/luxon/-/luxon-3.4.2.tgz#e4fc7214a420173cea47739c33cdf10874694db7"
+  integrity sha512-TifLZlFudklWlMBfhubvgqTXRzLDI5pCbGa4P8a3wPyUQSW+1xQ5eDsreP9DWHX3tjq1ke96uYG/nwundroWcA==
 
 "@types/ms@*":
   version "0.7.34"
@@ -1156,10 +1156,10 @@ base64-js@^1.3.1:
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
 
-batch-cluster@^12.1.0:
-  version "12.1.0"
-  resolved "https://registry.yarnpkg.com/batch-cluster/-/batch-cluster-12.1.0.tgz#697f3e11d7bc49d6befea139025431efe0e1e16f"
-  integrity sha512-whGyJU4tr7kyg2USByu0/51mML5HsLAeNz5s03kMDYZNsQsGgDJgI47RdY3r7MciCjPkTaTD5O4eOVqOfEO7pg==
+batch-cluster@^13.0.0:
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/batch-cluster/-/batch-cluster-13.0.0.tgz#690a0c0660f4d48f8fbc1d59d8b1c743246d5507"
+  integrity sha512-EreW0Vi8TwovhYUHBXXRA5tthuU2ynGsZFlboyMJHCCUXYa2AjgwnE3ubBOJs2xJLcuXFJbi6c/8pH5+FVj8Og==
 
 binary-extensions@^2.0.0:
   version "2.2.0"
@@ -1664,29 +1664,29 @@ execa@^5.0.0:
     signal-exit "^3.0.3"
     strip-final-newline "^2.0.0"
 
-exiftool-vendored.exe@12.70.0:
-  version "12.70.0"
-  resolved "https://registry.yarnpkg.com/exiftool-vendored.exe/-/exiftool-vendored.exe-12.70.0.tgz#54d47a28eb144414ec6112fa1fb6388981057895"
-  integrity sha512-Jp78fvWCls2q3+6P0GxEpgBEgIj2MJsrOKxfAnVzADO3BZ8jRTdYCHVMUoxbiuzIcqzLmQA2mPLjhQ35Y4MyeA==
+exiftool-vendored.exe@12.80.0:
+  version "12.80.0"
+  resolved "https://registry.yarnpkg.com/exiftool-vendored.exe/-/exiftool-vendored.exe-12.80.0.tgz#ea9c1b9433b5badfa48d283182656c6afad8c6a6"
+  integrity sha512-n4xm5yjYKuIWK0zSE1LwC4JL5KdeGTVcvGdq9+XRpFdRZTrwy7SlBxWi2vSXpfu/S72ZJXsBjPI/T43Yc3wD4g==
 
-exiftool-vendored.pl@12.70.0:
-  version "12.70.0"
-  resolved "https://registry.yarnpkg.com/exiftool-vendored.pl/-/exiftool-vendored.pl-12.70.0.tgz#787dfa7cf6ab5a323aaaccf0bd697aff6f8f4a11"
-  integrity sha512-nozVKVE7Leq2lQ+Kd6VbX+S04z0TKYGd42F1odwEl8AtWNlJViZ7rsi+OLHkJ0llWmObotviYAsj/xhF28qPSQ==
+exiftool-vendored.pl@12.80.0:
+  version "12.80.0"
+  resolved "https://registry.yarnpkg.com/exiftool-vendored.pl/-/exiftool-vendored.pl-12.80.0.tgz#9751aed0307594ca235eb95306acb3055e664c98"
+  integrity sha512-ixKZuQT67yDdPlQOfmJQjhxEgAo5YKfAKqpalZInutMj8fhwOmGkL+MlTwKvzWjExU9sfAFfobmiatFCI8mfKQ==
 
-exiftool-vendored@^24.1.0:
-  version "24.2.0"
-  resolved "https://registry.yarnpkg.com/exiftool-vendored/-/exiftool-vendored-24.2.0.tgz#a6eb4e93efee591421d23c626878d6fb1b089833"
-  integrity sha512-ZBkwbVIUa8++nHNT5yUHBImSt3RAFqpDQw4ClPjX/+BdbLJ1sbjEVvWF2wevodou7XxSBFsDtEWl2qfR7vpwAg==
+exiftool-vendored@^25.1.0:
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/exiftool-vendored/-/exiftool-vendored-25.1.0.tgz#92c4af34d4878f009678f0729bee227c848a0ec1"
+  integrity sha512-ZKOe56FNqPWK3yfNFuxHvxjIw6MZh4Za4n+Jv5YfF5BWAzas95oOSEXSJ/+JS1tuuiEW33Upk+zAiOuGNk9jtg==
   dependencies:
-    "@photostructure/tz-lookup" "^8.0.0"
-    "@types/luxon" "^3.3.7"
-    batch-cluster "^12.1.0"
+    "@photostructure/tz-lookup" "^10.0.0"
+    "@types/luxon" "^3.4.2"
+    batch-cluster "^13.0.0"
     he "^1.2.0"
     luxon "^3.4.4"
   optionalDependencies:
-    exiftool-vendored.exe "12.70.0"
-    exiftool-vendored.pl "12.70.0"
+    exiftool-vendored.exe "12.80.0"
+    exiftool-vendored.pl "12.80.0"
 
 exit@^0.1.2:
   version "0.1.2"
@@ -3106,6 +3106,7 @@ string-length@^4.0.1:
     strip-ansi "^6.0.0"
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -3131,6 +3132,7 @@ string_decoder@^1.1.1:
     safe-buffer "~5.2.0"
 
 "strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+  name strip-ansi-cjs
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -3380,6 +3382,7 @@ which@^2.0.1:
     isexe "^2.0.0"
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
