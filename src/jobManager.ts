@@ -139,8 +139,13 @@ export class JobManager {
     private next() {
         if (this.jobs.size === 0 || this.activeJobs.size >= this.instances) return;
 
-        const key = this.jobs.entries().next().value[0];
-        const job = this.jobs.get(key);
+        const iteratorResult = this.jobs.entries().next();
+
+        if (iteratorResult.done) {
+            return;
+        }
+
+        const [key, job] = iteratorResult.value;
 
         if (job) {
             this.jobs.delete(key);
