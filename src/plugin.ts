@@ -163,6 +163,7 @@ export class Plugin {
         }
 
         const mainPath = join(this.pluginPath, this.main);
+        // eslint-disable-next-line @typescript-eslint/no-var-requires -- plugins are loaded dynamically at runtime
         const pluginModules = require(mainPath);
 
         if (typeof pluginModules === 'function') {

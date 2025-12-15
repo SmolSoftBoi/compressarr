@@ -64,7 +64,6 @@ export class FileService extends EventEmitter {
             persistent: true,
             ignored: '.*',
             followSymlinks: true,
-            useFsEvents: true,
             alwaysStat: true,
             atomic: true,
             awaitWriteFinish: true

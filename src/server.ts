@@ -180,7 +180,19 @@ export class Server {
     }
 
     /** Teardown */
-    public teardown(): void {}
+    public teardown(): void {
+        // Stop active work first.
+        for (const jobPath of this.activeJobs.keys()) {
+            try {
+                this.api.unregisterJob(jobPath);
+            } catch (error) {
+                log.debug(getError(error));
+            }
+        }
+
+        // Let plugins and consumers know we're shutting down.
+        this.api.signalShutdown();
+    }
 
     /**
      * Load Configuration
