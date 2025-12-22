@@ -1814,20 +1814,20 @@ execa@^5.1.1:
     signal-exit "^3.0.3"
     strip-final-newline "^2.0.0"
 
-exiftool-vendored.exe@13.43.0:
-  version "13.43.0"
-  resolved "https://registry.yarnpkg.com/exiftool-vendored.exe/-/exiftool-vendored.exe-13.43.0.tgz#01822ef824efc0caaca96a5acbec2ea296c783ea"
-  integrity sha512-EENHNz86tYY5yHGPtGB2mto3FIGstQvEhrcU34f7fm4RMxBKNfTWYOGkhU1jzvjOi+V4575LQX/FUES1TwgUbQ==
+exiftool-vendored.exe@13.44.0:
+  version "13.44.0"
+  resolved "https://registry.yarnpkg.com/exiftool-vendored.exe/-/exiftool-vendored.exe-13.44.0.tgz#70847caf5cdebd3ee0c72c933f1ed70ffe486f28"
+  integrity sha512-PzQrrz9k4YzxtcX1r/hEy+xzj6MKXXiEBCU+FhYlipr4fuKKeXgspB7kliPSfSSFAChYoSH294zd23ZUXgB4TQ==
 
-exiftool-vendored.pl@13.43.0:
-  version "13.43.0"
-  resolved "https://registry.yarnpkg.com/exiftool-vendored.pl/-/exiftool-vendored.pl-13.43.0.tgz#ff0b610370e655e04d739143936666770a0a27c8"
-  integrity sha512-0ApWaQ/pxaliPK7HzTxVA0sg/wZ8vl7UtFVhCyWhGQg01WfZkFrKwKmELB0Bnn01WTfgIuMadba8ccmFvpmJag==
+exiftool-vendored.pl@13.44.0:
+  version "13.44.0"
+  resolved "https://registry.yarnpkg.com/exiftool-vendored.pl/-/exiftool-vendored.pl-13.44.0.tgz#54797188c534c69e0d7cd9915af1999abc6a86d1"
+  integrity sha512-KPqyZK5guU/HKJ4x7OdxC0bqwClz34AtQYeirvvGFBjvfpG6Ewt+Kx9TEd/JbvJyLgMS5k5GHvkH5R5iAL+Arg==
 
 exiftool-vendored@^34.0.0:
-  version "34.0.0"
-  resolved "https://registry.yarnpkg.com/exiftool-vendored/-/exiftool-vendored-34.0.0.tgz#0036e299f4385a6e641020445c8f78fd7cae38a6"
-  integrity sha512-rhIe4XGE7kh76nwytwHtq6qK/pc1mpOBHRV++gudFeG2PfAp3XIVQbFWCLK3S4l9I4AWYOe4mxk8mW8l1oHRTw==
+  version "34.1.0"
+  resolved "https://registry.yarnpkg.com/exiftool-vendored/-/exiftool-vendored-34.1.0.tgz#a441dec68478c7815319f7d5257ac7d7e4000bdd"
+  integrity sha512-piPUu8oaBT0JQcR0gH/ZLjnTrHu51lMs+GjAQPrtVyvt8bfB1vzTWYbw+9jN4qyO8HwCweJuj7xivmWS0/fa/A==
   dependencies:
     "@photostructure/tz-lookup" "^11.3.0"
     "@types/luxon" "^3.7.1"
@@ -1835,8 +1835,8 @@ exiftool-vendored@^34.0.0:
     he "^1.2.0"
     luxon "^3.7.2"
   optionalDependencies:
-    exiftool-vendored.exe "13.43.0"
-    exiftool-vendored.pl "13.43.0"
+    exiftool-vendored.exe "13.44.0"
+    exiftool-vendored.pl "13.44.0"
 
 exit-x@^0.2.2:
   version "0.2.2"
