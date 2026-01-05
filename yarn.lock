@@ -1825,9 +1825,9 @@ exiftool-vendored.pl@13.45.0:
   integrity sha512-uA58bMcXqdSQAqsZbHa/SMU6XKXsmoMcJSlKJjsCmLlQKEThncuAlpg8wGVNhULNXxYmRXXnYQ1756UYQY9VIA==
 
 exiftool-vendored@^34.0.0:
-  version "34.2.0"
-  resolved "https://registry.yarnpkg.com/exiftool-vendored/-/exiftool-vendored-34.2.0.tgz#43227d3fc9207f39ae57d6a3ceda046aa92c96a2"
-  integrity sha512-s12oPPIQgjnIpbRlk6tLKo5/D56I/pZB9yelSHGmKiHvZLrLMAUrXI2Ns7d6qmDka2FXTTXeh1rWdSeh/Tk+MA==
+  version "34.3.0"
+  resolved "https://registry.yarnpkg.com/exiftool-vendored/-/exiftool-vendored-34.3.0.tgz#f0a451c4eef938315124d712a43aa6faa631ed06"
+  integrity sha512-CpNH1FAhIQG5AlKndlTf05mNbuFxINyzG9629ZI/CKwr+39zWo8swxpnXc3GUfUvUfxkCCxumDPy2QVmi3XJkQ==
   dependencies:
     "@photostructure/tz-lookup" "^11.3.0"
     "@types/luxon" "^3.7.1"
