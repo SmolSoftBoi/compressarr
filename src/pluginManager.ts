@@ -1,6 +1,7 @@
 import { execSync } from 'child_process';
 import { existsSync, readdirSync, readFileSync, statSync } from 'fs';
-import { delimiter, join, resolve } from 'path';
+import { delimiter, join, resolve, relative, isAbsolute } from 'path';
+import * as path from 'path';
 
 import { getErrorMessage, getErrorStack, Logger } from '@epickris/node-logger';
 
@@ -110,7 +111,13 @@ export class PluginManager {
     
         if (options) {
             if (options.customPluginPath) {
-                this.searchPaths.add(resolve(process.cwd(), options.customPluginPath));
+                const base = resolve(process.cwd());
+                const target = resolve(base, options.customPluginPath);
+                const rel = relative(base, target);
+                if (rel.startsWith('..') || isAbsolute(rel)) {
+                    throw new Error('Invalid plugin path');
+                }
+                this.searchPaths.add(target);
             }
         
             this.activePlugins = options.activePlugins;
@@ -345,7 +352,14 @@ export class PluginManager {
             } else {
                 const relativePluginPaths = readdirSync(searchPath).filter(relativePath => {
                     try {
-                        return statSync(resolve(searchPath, relativePath)).isDirectory();
+                        const base = resolve(searchPath);
+                        const target = resolve(base, relativePath);
+                        const rel = path.relative(base, target);
+                        if (rel.startsWith('..') || path.isAbsolute(rel)) {
+                            log.debug(`Ignoring path ${target} - invalid path`);
+                            return false;
+                        }
+                        return statSync(target).isDirectory();
                     } catch (error) {
                         log.debug(`Ignoring path ${resolve(searchPath, relativePath)} - ${getErrorMessage(error)}`);
 
@@ -361,7 +375,14 @@ export class PluginManager {
 
                     readdirSync(absolutePath).filter(name => PluginManager.isQualifiedPluginIdentifier(name)).filter(name => {
                         try {
-                            return statSync(resolve(absolutePath, name)).isDirectory();
+                            const base = resolve(absolutePath);
+                            const target = resolve(base, name);
+                            const rel = path.relative(base, target);
+                            if (rel.startsWith('..') || path.isAbsolute(rel)) {
+                                log.debug(`Ignoring path ${target} - invalid path`);
+                                return false;
+                            }
+                            return statSync(target).isDirectory();
                         } catch (error) {
                             log.debug(`Ignoring path ${resolve(absolutePath, name)} - ${getErrorMessage(error)}`);
 
@@ -422,7 +443,12 @@ export class PluginManager {
      * @returns Package JSON
      */
     private static loadPackageJSON(pluginPath: string): PackageJSON {
-        const packageJsonPath = join(pluginPath, 'package.json');
+        const packageJsonPath = path.resolve(join(pluginPath, 'package.json'));
+        const baseDir = path.resolve(pluginPath);
+        const relativePath = path.relative(baseDir, packageJsonPath);
+        if (relativePath.startsWith('..') || path.isAbsolute(relativePath)) {
+            throw new Error(`Invalid path.`);
+        }
 
         let packageJson: PackageJSON;
     
